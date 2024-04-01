@@ -23,7 +23,7 @@ def render_done():
 
         return render_template('layout.html', answer  = r, done = '/done' )
     
-    return render_template('layout.html', done = "/done")
+    return render_template('layout.html', done = "/done", answer = "Would you like a recipe to make? (Yes/Recipe)" )
 
 
 @app.route("/p1")
