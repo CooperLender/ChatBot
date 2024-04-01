@@ -18,7 +18,7 @@ def render_done():
     #The request object stores information about the request sent to the server.
     #args is an ImmutableMultiDict (like a dictionary but can have mutliple values for the same key and can't be changed)
     #The information in args is visible in the url for the page being requested. ex. .../response?color=blue
-    if 'recipe' or 'yes' in text:
+    if 'recipe' in text or 'yes' in text:
         r = get_recipe()
 
         return render_template('layout.html', answer  = r, done = '/done' )
